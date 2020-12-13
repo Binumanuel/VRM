@@ -20,11 +20,23 @@ namespace VRM
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/respond.js"));
+            bundles.Add(new ScriptBundle("~/Content/js").Include(
+                      "~/Content/js/jquery.js",
+                       "~/Content/js/bootstrap.min.js",
+                          "~/Content/js/jquery.scrollTo.min.js",
+                          "~/Content/js/jquery.nicescroll.js",
+                      "~/Content/js/scripts.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/css/bootstrap.min.css",
+                       "~/Content/css/bootstrap-theme.css",
+                        "~/Content/css/elegant-icons-style.css",
+                         "~/Content/css/font-awesome.min.css",
+                          "~/Content/css/style.css",
+                         "~/Content/css/style-responsive.css"
+                    ));
         }
     }
 }
