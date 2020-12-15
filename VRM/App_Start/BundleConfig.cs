@@ -26,7 +26,9 @@ namespace VRM
                       "~/Content/js/jquery.js",
                        "~/Content/js/bootstrap.min.js",
                           "~/Content/js/jquery.scrollTo.min.js",
-                          "~/Content/js/jquery.nicescroll.js",
+                          "~/Content/js/jquery.nicescroll.js",                         
+                            "~/Content/js/bootstrap-datepicker.js",
+                               "~/Content/js/form-component.js",
                       "~/Content/js/scripts.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -35,6 +37,7 @@ namespace VRM
                         "~/Content/css/elegant-icons-style.css",
                          "~/Content/css/font-awesome.min.css",
                           "~/Content/css/style.css",
+                           "~/Content/css/bootstrap-datepicker.css",
                          "~/Content/css/style-responsive.css"
                     ));
         }

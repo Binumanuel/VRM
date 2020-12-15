@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+@*<link href="~/Content/js/daterangepicker.js" rel="stylesheet" />
+    <link href="~/Content/js/bootstrap-datepicker.js" rel="stylesheet" />*@
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header"><i class="fa fa fa-bars"></i> Pages</h3>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+            <li><i class="fa fa-bars"></i>Leaves</li>
+            <li><i class="fa fa-square-o"></i>Create Leave</li>
+        </ol>
+    </div>
+</div>
+
+<h2>Apply Leave</h2>
+<section class="panel">
+    @*<div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-file-text-o"></i> Form elements</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                    <li><i class="icon_document_alt"></i>Forms</li>
+                    <li><i class="fa fa-file-text-o"></i>Form elements</li>
+                </ol>
+            </div>
+        </div>*@
+
+    <header class="panel-heading">
+        @*Form Elements*@
+    </header>
+    <div class="panel-body">
+        <form class="form-horizontal " id="myForm" method="post">
+            <div class="form-group">
+                <label for="cname" class="col-sm-2 control-label">Employee ID<span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    <input type="text" id="Projname" name="projectname" class="form-control round-input" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cversion" class="col-sm-2 control-label">Employee Name <span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    <input type="text" id="Projversion" class="form-control round-input" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Date <span class="required"> * </span></label>
+                <div class="col-sm-6">
+                    <input id="dp1" type="text" value="12-20-2020" size="16" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputSuccess">Leave Type<span class="required"> * </span></label>
+                <div class="col-sm-3">
+
+                    <select class="form-control" id="selectHost" required>
+                        <option value="">Choose LeaveType</option>
+                        <option value="1">Paid Leave</option>
+                        <option value="2">Unpaid Leave</option>
+                        <option value="2">Maternity Leave</option>
+                        <option value="2">Paternity Leave</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <button class="btn btn-primary" id="btnSave" type="submit">Save</button>
+                    <button class="btn btn-default" id="btnCancel" type="button">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
