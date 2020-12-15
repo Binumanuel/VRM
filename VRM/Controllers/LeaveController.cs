@@ -17,5 +17,9 @@ namespace VRM.Controllers
         {
             return View();
         }
+        //public ActionResult Details()
+        //{
+        //    return View();
+        //}
     }
 }
