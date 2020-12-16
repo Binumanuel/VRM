@@ -8,7 +8,7 @@ namespace VRM.Controllers
 {
     public class TestController : Controller
     {
-        // GET: Test
+        // GET: Test nai
         public ActionResult Index()
         {
             return View();

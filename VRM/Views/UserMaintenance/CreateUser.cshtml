@@ -1,0 +1,82 @@
+﻿@model VRM.Models.UserMainParameters
+
+@{
+    ViewBag.Title = "CreateUser";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header"><i class="fa fa fa-bars"></i> Pages</h3>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+            <li><i class="fa fa-bars"></i>User Maintenance</li>
+            <li><i class="fa fa-square-o"></i>Create User</li>
+        </ol>
+    </div>
+</div>
+<section class="panel">
+    <header class="panel-heading">
+        Create User
+    </header>
+    <div class="panel-body">
+        <form class="form-horizontal " id="myForm" method="post">
+            <div class="form-group">
+                <label for="cname" class="col-sm-2 control-label">Employee ID<span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    @*<input type="text" id="txtEmpID" name="txtEmpID" class="form-control round-input" required>*@
+                    @Html.TextBoxFor(Model => Model.EmpID, new { @class = "form-control round-input empID" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cname" class="col-sm-2 control-label">Employee Name<span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    @*<input type="text" id="txtEmpID" name="txtEmpID" class="form-control round-input" required>*@
+                    @Html.TextBoxFor(Model => Model.EmpName, new { @class = "form-control round-input empName" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cname" class="col-sm-2 control-label">Employee Email<span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    @*<input type="text" id="txtEmpID" name="txtEmpID" class="form-control round-input" required>*@
+                    @Html.TextBoxFor(Model => Model.Email, new { @class = "form-control round-input empEmail" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cname" class="col-sm-2 control-label">Employee Role<span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    @*<input type="text" id="txtEmpID" name="txtEmpID" class="form-control round-input" required>*@
+                    @Html.DropDownListFor(model => model.Roles, (IEnumerable<SelectListItem>)ViewBag.drpListForRole, new { @class = "form-control round-input" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cname" class="col-sm-2 control-label">Is Employee Active<span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    @*<input type="text" id="txtEmpID" name="txtEmpID" class="form-control round-input" required>*@
+                    @Html.CheckBoxFor(Model => Model.IsActEmp, new { @class = "form-control round-input empRole" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cname" class="col-sm-2 control-label">Reportee<span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    @*<input type="text" id="txtEmpID" name="txtEmpID" class="form-control round-input" required>*@
+                    @Html.DropDownListFor(model => model.Reportee, (IEnumerable<SelectListItem>)ViewBag.drpListForReportee, new { @class = "form-control round-input" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cname" class="col-sm-2 control-label">Team<span class="required"> * </span></label>
+                <div class="col-sm-10">
+                    @*<input type="text" id="txtEmpID" name="txtEmpID" class="form-control round-input" required>*@
+                    @Html.DropDownListFor(model => model.Team, (IEnumerable<SelectListItem>)ViewBag.drpList, new { @class = "form-control round-input" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <button class="btn btn-primary" id="btnSave" type="submit" name="SaveUser">Save</button>
+                    <button class="btn btn-default" id="btnCancel" type="button">Cancel</button>
+                    @*<input type="submit" name="SaveUser" value="Save User" />
+                    <input type="submit" name="Cancle" value="Cancel" />*@
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
